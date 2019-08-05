@@ -16,4 +16,10 @@ class MathsTest {
         val maths = Maths()
         assertEquals(100, maths.sum(45, 55))
     }
+
+    @Test
+    fun `should return sum of 5 numbers using stream api`(){
+        val maths = Maths()
+        assertEquals(15, maths.sumUsingStreamAPI(listOf(1, 2, 3, 4, 5)))
+    }
 }
