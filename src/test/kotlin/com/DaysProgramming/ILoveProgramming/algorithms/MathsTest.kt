@@ -22,4 +22,10 @@ class MathsTest {
         val maths = Maths()
         assertEquals(15, maths.sumUsingStreamAPI(listOf(1, 2, 3, 4, 5)))
     }
+
+    @Test
+    fun `should return sorted number using stream api`(){
+        val maths = Maths()
+        assertEquals(listOf(1,2,3,4,5), maths.sortNumbersUsingStreamAPI(listOf(5, 3, 1, 4, 2)))
+    }
 }
