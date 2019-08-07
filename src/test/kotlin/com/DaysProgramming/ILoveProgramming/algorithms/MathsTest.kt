@@ -28,4 +28,10 @@ class MathsTest {
         val maths = Maths()
         assertEquals(listOf(1,2,3,4,5), maths.sortNumbersUsingStreamAPI(listOf(5, 3, 1, 4, 2)))
     }
+
+    @Test
+    fun `should return difference of two numbers`(){
+        val maths = Maths()
+        assertEquals(279, maths.difference(1045, 766))
+    }
 }

@@ -12,4 +12,8 @@ class Maths {
     fun sortNumbersUsingStreamAPI(numbers: List<Int>): List<Int> {
         return numbers.sorted()
     }
+
+    fun difference(firstNumber: Int, secondNumber: Int): Int {
+        return firstNumber - secondNumber
+    }
 }
