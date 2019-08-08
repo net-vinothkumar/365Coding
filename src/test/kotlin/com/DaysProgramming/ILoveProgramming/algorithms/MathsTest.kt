@@ -34,4 +34,10 @@ class MathsTest {
         val maths = Maths()
         assertEquals(279, maths.difference(1045, 766))
     }
+
+    @Test
+    fun `should return distinct sorted numbers`(){
+        val maths = Maths()
+        assertEquals(listOf(0, 5, 13, 19), maths.distinctSorted(listOf(0, 5, 19, 0, 13, 19, 23, 13, 45, 19)))
+    }
 }
