@@ -4,7 +4,7 @@ import java.util.stream.Collectors.toList
 
 
 class Maths {
-     fun sum( firstNumber : Int, secondNumber : Int) : Int {
+    fun sum(firstNumber: Int, secondNumber: Int): Int {
         return firstNumber + secondNumber
     }
 
@@ -20,8 +20,12 @@ class Maths {
         return firstNumber - secondNumber
     }
 
-    fun distinctSorted(numbers : List<Int>) : List<Int> {
+    fun distinctSorted(numbers: List<Int>): List<Int> {
         return numbers.stream().distinct().sorted().limit(4).collect(toList())
+    }
+
+    fun divide(dividend: Int, divisor: Int): Int {
+        return dividend / divisor
     }
 
 }

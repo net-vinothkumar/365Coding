@@ -40,4 +40,11 @@ class MathsTest {
         val maths = Maths()
         assertEquals(listOf(0, 5, 13, 19), maths.distinctSorted(listOf(0, 5, 19, 0, 13, 19, 23, 13, 45, 19)))
     }
+
+    @Test
+    fun `should return result while dividing two numbers`(){
+        val maths = Maths()
+        assertEquals(2, maths.divide(100, 50))
+    }
+
 }
