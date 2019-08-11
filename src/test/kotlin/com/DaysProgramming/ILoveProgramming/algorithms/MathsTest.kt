@@ -47,4 +47,9 @@ class MathsTest {
         assertEquals(2, maths.divide(100, 50))
     }
 
+    @Test
+    fun `should return result for multiplying two numbers`(){
+        val maths = Maths()
+        assertEquals(100, maths.multiply(20, 5))
+    }
 }

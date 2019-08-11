@@ -28,4 +28,7 @@ class Maths {
         return dividend / divisor
     }
 
+    fun multiply(firstNumber: Int, secondNumber: Int): Int {
+        return firstNumber * secondNumber
+    }
 }
