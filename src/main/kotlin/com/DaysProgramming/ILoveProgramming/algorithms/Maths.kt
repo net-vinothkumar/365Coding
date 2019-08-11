@@ -31,4 +31,8 @@ class Maths {
     fun multiply(firstNumber: Int, secondNumber: Int): Int {
         return firstNumber * secondNumber
     }
+
+    fun calculatePercentage(part: Int, total: Int): Int {
+        return (part * 100)/ total
+    }
 }

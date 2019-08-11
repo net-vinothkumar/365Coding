@@ -52,4 +52,16 @@ class MathsTest {
         val maths = Maths()
         assertEquals(100, maths.multiply(20, 5))
     }
+
+    @Test
+    fun `should return percentage results for the given part and total numbers`(){
+        val maths = Maths()
+        assertEquals(100, maths.calculatePercentage(100, 100))
+    }
+
+    @Test
+    fun `should return percentage results for the given different part and total numbers`(){
+        val maths = Maths()
+        assertEquals(83, maths.calculatePercentage(67, 80))
+    }
 }
