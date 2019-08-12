@@ -33,6 +33,13 @@ class Maths {
     }
 
     fun calculatePercentage(part: Int, total: Int): Int {
-        return (part * 100)/ total
+        return (part * 100) / total
+    }
+
+    fun findMax(firstNumber: Int, secondNumber: Int): Int {
+        return when (firstNumber > secondNumber) {
+            true -> firstNumber
+            false -> secondNumber
+        }
     }
 }

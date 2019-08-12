@@ -64,4 +64,10 @@ class MathsTest {
         val maths = Maths()
         assertEquals(83, maths.calculatePercentage(67, 80))
     }
+
+    @Test
+    fun `should return maximum of two numbers`(){
+        val maths = Maths()
+        assertEquals(80, maths.findMax(67, 80))
+    }
 }
