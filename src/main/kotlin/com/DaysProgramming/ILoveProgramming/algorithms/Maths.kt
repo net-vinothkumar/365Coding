@@ -42,4 +42,8 @@ class Maths {
             false -> secondNumber
         }
     }
+
+    fun concat(first: String, second: String): String {
+        return first + " " + second
+    }
 }

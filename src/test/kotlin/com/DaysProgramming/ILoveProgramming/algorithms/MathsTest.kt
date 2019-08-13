@@ -70,4 +70,10 @@ class MathsTest {
         val maths = Maths()
         assertEquals(80, maths.findMax(67, 80))
     }
+
+    @Test
+    fun `should return concatenated string`(){
+        val maths = Maths()
+        assertEquals("Hello InterviewDOT", maths.concat("Hello", "InterviewDOT"))
+    }
 }
