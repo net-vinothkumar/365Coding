@@ -76,4 +76,10 @@ class MathsTest {
         val maths = Maths()
         assertEquals("Hello InterviewDOT", maths.concat("Hello", "InterviewDOT"))
     }
+
+    @Test
+    fun `should return number of words in a sentence`(){
+        val maths = Maths()
+        assertEquals(2, maths.findNumberOfWords("to" ,"InterviewDOT has goal to help people helping students to learn the software using tamil, all the best"))
+    }
 }
