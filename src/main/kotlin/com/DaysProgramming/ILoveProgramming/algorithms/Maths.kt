@@ -46,8 +46,4 @@ class Maths {
     fun concat(first: String, second: String): String {
         return first + " " + second
     }
-
-    fun findNumberOfWords(wordToFind: String, sentence: String): Int {
-        return 2
-    }
 }
