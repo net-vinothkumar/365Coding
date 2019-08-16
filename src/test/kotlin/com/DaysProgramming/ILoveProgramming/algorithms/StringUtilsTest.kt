@@ -16,4 +16,10 @@ class StringUtilsTest {
         val stringUtils = StringUtils()
         assertEquals(listOf("John", "Scott", "Maria", "Stephen", "Philip"), stringUtils.filterNull(Arrays.asList("John", null, "Scott", null, "Maria", null, "Stephen", null, "Philip")))
     }
+
+    @Test
+    fun `should return the length of the sentence`(){
+        val stringUtils = StringUtils()
+        assertEquals(59, stringUtils.lengthOfSentence("InterviewDOT will be helping 1 billion people in the world."))
+    }
 }
