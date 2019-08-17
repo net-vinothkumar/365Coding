@@ -12,7 +12,7 @@ class StringUtilsTest {
     }
 
     @Test
-    fun `should filter null from the given list of string`(){
+    fun `should filter empty from the given list of string`(){
         val stringUtils = StringUtils()
         assertEquals(listOf("John", "Scott", "Maria", "Stephen", "Philip"), stringUtils.filterNull(Arrays.asList("John", null, "Scott", null, "Maria", null, "Stephen", null, "Philip")))
     }

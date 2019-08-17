@@ -2,6 +2,9 @@ package com.DaysProgramming.ILoveProgramming.algorithms
 
 import java.util.*
 import java.util.stream.Collectors
+import java.util.stream.IntStream
+
+
 
 class StringUtils {
     fun findNumberOfWords(wordToFind: String, sentence: String): Int {
@@ -22,6 +25,8 @@ class StringUtils {
     }
 
     fun lengthOfSentence(sentence: String): Int {
+        println(IntStream.range(1, 10).reduce { a, b -> a + b }.asInt)
+
         return sentence.length
     }
 }
