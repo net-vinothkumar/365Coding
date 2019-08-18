@@ -1,5 +1,6 @@
 package com.DaysProgramming.ILoveProgramming.algorithms
 
+import java.util.*
 import java.util.stream.Collectors.toList
 
 
@@ -45,5 +46,10 @@ class Maths {
 
     fun concat(first: String, second: String): String {
         return first + " " + second
+    }
+
+    fun sumUsingReduce() : Optional<Long> {
+        val values = listOf<Long>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        return values.stream().map { i -> i }.reduce { c, e -> c + e }
     }
 }

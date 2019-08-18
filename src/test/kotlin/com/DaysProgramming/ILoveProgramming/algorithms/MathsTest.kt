@@ -76,4 +76,10 @@ class MathsTest {
         val maths = Maths()
         assertEquals("Hello InterviewDOT", maths.concat("Hello", "InterviewDOT"))
     }
+
+    @Test
+    fun `should return sum using reduce method`(){
+        val maths = Maths()
+        assertEquals(55, maths.sumUsingReduce().get())
+    }
 }

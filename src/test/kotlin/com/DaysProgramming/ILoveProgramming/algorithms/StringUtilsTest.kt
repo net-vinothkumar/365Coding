@@ -22,4 +22,14 @@ class StringUtilsTest {
         val stringUtils = StringUtils()
         assertEquals(59, stringUtils.lengthOfSentence("InterviewDOT will be helping 1 billion people in the world."))
     }
+
+    @Test
+    fun `should return sorted names starting with 'm' `(){
+        val stringUtils = StringUtils()
+        val sortedNamesWithM = stringUtils.getSortedNames(Arrays.asList("Michael", "John", "Scott", "Maria", "Stephen", "Philip", "Martin"))
+        println(sortedNamesWithM)
+        assertEquals(listOf("Maria", "Martin", "Michael"), sortedNamesWithM)
+    }
+
+
 }
