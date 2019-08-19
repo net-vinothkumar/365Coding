@@ -82,4 +82,11 @@ class MathsTest {
         val maths = Maths()
         assertEquals(55, maths.sumUsingReduce().get())
     }
+
+    @Test
+    fun `should return true since the sentence contains numbers`(){
+        val maths = Maths()
+        assertEquals(true, maths.isSentenceContainsNumber("InterviewDOT"))
+        assertEquals(false, maths.isSentenceContainsNumber("This is 4 you"))
+    }
 }

@@ -1,5 +1,6 @@
 package com.DaysProgramming.ILoveProgramming.algorithms
 
+import java.math.BigInteger
 import java.util.*
 import java.util.stream.Collectors.toList
 
@@ -51,5 +52,28 @@ class Maths {
     fun sumUsingReduce() : Optional<Long> {
         val values = listOf<Long>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
         return values.stream().map { i -> i }.reduce { c, e -> c + e }
+    }
+
+//    fun oneMillion(){
+//        var data = ArrayList<Long>()
+//        for( i in 0..10000000){
+//            val random = Random().nextLong()
+//            data.add(random)
+//        }
+//
+////        var result = 0L
+////        for(i in data) {
+////            result += i
+////        }
+//
+//        val result = data.parallelStream().reduce{a, b -> a+b}.get()
+//        println(Runtime.getRuntime().availableProcessors())
+//
+//        println(result)
+//
+//    }
+
+    fun isSentenceContainsNumber(string : String) : Boolean {
+        return (string != "" && string.chars().allMatch(Character::isLetter))
     }
 }
