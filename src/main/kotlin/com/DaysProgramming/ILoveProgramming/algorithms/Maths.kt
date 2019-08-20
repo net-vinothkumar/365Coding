@@ -1,6 +1,5 @@
 package com.DaysProgramming.ILoveProgramming.algorithms
 
-import java.math.BigInteger
 import java.util.*
 import java.util.stream.Collectors.toList
 
@@ -75,5 +74,9 @@ class Maths {
 
     fun isSentenceContainsNumber(string : String) : Boolean {
         return (string != "" && string.chars().allMatch(Character::isLetter))
+    }
+
+    fun filterFromLis(list: List<Long?>): List<Long?> {
+        return list.stream().filter(Objects::nonNull).collect(toList())
     }
 }
