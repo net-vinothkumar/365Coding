@@ -31,5 +31,4 @@ class StringUtilsTest {
         assertEquals(listOf("Maria", "Martin", "Michael"), sortedNamesWithM)
     }
 
-
 }

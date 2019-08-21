@@ -7,16 +7,16 @@ import java.util.stream.IntStream
 
 class StringUtils {
     fun findNumberOfWords(wordToFind: String, sentence: String): Int {
-
-        val list1 = listOf<Long>(1, 2, 3)
-        val list2 = listOf<Long>(4, 5, 6)
-        val list3 = listOf<Long>(7, 8, 9, 10)
-
-        val listResult = listOf(list1, list2, list3)
-        val res = listResult.stream().flatMap { x -> x.stream() }.collect(Collectors.toList())
-        println(res)
-
-        return 2
+        var count = 0
+        sentence.split(" ").stream().forEach {
+            token ->
+            run {
+                if (token == wordToFind) {
+                    count++
+                }
+            }
+        }
+        return count
     }
 
     fun filterNull(listOfNames: List<String?>): List<String?>? {
