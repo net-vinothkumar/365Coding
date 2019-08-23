@@ -8,8 +8,7 @@ import java.util.stream.IntStream
 class StringUtils {
     fun findNumberOfWords(wordToFind: String, sentence: String): Int {
         var count = 0
-        sentence.split(" ").stream().forEach {
-            token ->
+        sentence.split(" ").stream().forEach { token ->
             run {
                 if (token == wordToFind) {
                     count++
@@ -37,4 +36,12 @@ class StringUtils {
                 .collect(Collectors.toList())
     }
 
+    fun sort(strings: List<String>): List<String> {
+        return strings
+                .stream()
+                .sorted { str1, str2 ->
+                    Integer.compare(str1.length, str2.length)
+                }
+                .collect(Collectors.toList())
+    }
 }
