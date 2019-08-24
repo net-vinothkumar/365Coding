@@ -36,4 +36,10 @@ class StringUtilsTest {
         val stringUtils = StringUtils()
         assertEquals(listOf("AWS", "Java", "Learn", "Share", "Kotlin", "InterviewDOT"), stringUtils.sort(listOf("InterviewDOT", "AWS", "Java", "Kotlin", "Learn", "Share")))
     }
+
+    @Test
+    fun `should return reverse string`(){
+        val stringUtils = StringUtils()
+        assertEquals("TODweivretnI", stringUtils.reverse("InterviewDOT"))
+    }
 }
