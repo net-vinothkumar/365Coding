@@ -6,6 +6,7 @@ import java.util.*
 
 class StringUtilsTest {
     private val stringUtils = StringUtils()
+
     @Test
     fun `should return number of words in the given sentence`() {
         assertEquals(2, stringUtils.findNumberOfWords("to", "InterviewDOT has goal to help people helping students to learn the software using tamil, all the best"))
@@ -24,7 +25,6 @@ class StringUtilsTest {
     @Test
     fun `should return sorted names starting with 'M' `() {
         val sortedNamesWithM = stringUtils.getSortedNames(Arrays.asList("Michael", "John", "Scott", "Maria", "Stephen", "Philip", "Martin"))
-        println(sortedNamesWithM)
         assertEquals(listOf("Maria", "Martin", "Michael"), sortedNamesWithM)
     }
 
