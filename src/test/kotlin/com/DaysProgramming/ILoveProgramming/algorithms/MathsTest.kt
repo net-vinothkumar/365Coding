@@ -62,6 +62,11 @@ class MathsTest {
     }
 
     @Test
+    fun `should return maximum of three numbers`() {
+        assertEquals(90, maths.findMaxOfThree(67, 80, 90))
+    }
+
+    @Test
     fun `should return concatenated string`() {
         assertEquals("Hello InterviewDOT", maths.concat("Hello", "InterviewDOT"))
     }

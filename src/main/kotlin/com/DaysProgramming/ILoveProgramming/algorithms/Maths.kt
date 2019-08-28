@@ -79,4 +79,12 @@ class Maths {
     fun filterFromLis(list: List<Long?>): List<Long?> {
         return list.stream().filter(Objects::nonNull).collect(toList())
     }
+
+    fun findMaxOfThree(first: Int, second: Int, third: Int): Int {
+        return when {
+            first > second && first > third -> first
+            second > third -> second
+            else -> third
+        }
+    }
 }
