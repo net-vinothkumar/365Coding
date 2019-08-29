@@ -3,6 +3,9 @@ package com.DaysProgramming.ILoveProgramming.algorithms
 import java.util.*
 import java.util.stream.Collectors
 import java.util.stream.IntStream
+import java.util.function.IntPredicate
+
+
 
 
 class StringUtils {
@@ -47,5 +50,15 @@ class StringUtils {
 
     fun reverse(string: String): String {
         return string.reversed()
+    }
+
+    fun countVowel(string: String): Long {
+        return string.chars().filter(vowel).count()
+    }
+
+    var vowel: IntPredicate = IntPredicate { t ->
+        (t == 'a'.toInt() || t == 'e'.toInt() || t == 'i'.toInt() || t == 'o'.toInt() || t == 'u'.toInt()
+                || t == 'A'.toInt() || t == 'E'.toInt() || t == 'I'.toInt() || t == 'O'.toInt()
+                || t == 'U'.toInt())
     }
 }

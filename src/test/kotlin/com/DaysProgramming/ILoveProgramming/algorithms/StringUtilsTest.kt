@@ -37,4 +37,9 @@ class StringUtilsTest {
     fun `should return reverse string`() {
         assertEquals("TODweivretnI", stringUtils.reverse("InterviewDOT"))
     }
+
+    @Test
+    fun `should return number of vowels in the given string`() {
+        assertEquals(5, stringUtils.countVowel("InterviewDOT"))
+    }
 }
