@@ -6,8 +6,6 @@ import java.util.stream.IntStream
 import java.util.function.IntPredicate
 
 
-
-
 class StringUtils {
     fun findNumberOfWords(wordToFind: String, sentence: String): Int {
         var count = 0
@@ -27,7 +25,6 @@ class StringUtils {
 
     fun lengthOfSentence(sentence: String): Int {
         println(IntStream.range(1, 10).reduce { a, b -> a + b }.asInt)
-
         return sentence.length
     }
 

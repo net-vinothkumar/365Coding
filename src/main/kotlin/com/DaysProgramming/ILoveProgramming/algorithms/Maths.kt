@@ -48,7 +48,7 @@ class Maths {
         return first + " " + second
     }
 
-    fun sumUsingReduce() : Optional<Long> {
+    fun sumUsingReduce(): Optional<Long> {
         val values = listOf<Long>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
         return values.stream().map { i -> i }.reduce { c, e -> c + e }
     }
@@ -72,7 +72,7 @@ class Maths {
 //
 //    }
 
-    fun isSentenceContainsNumber(string : String) : Boolean {
+    fun isSentenceContainsNumber(string: String): Boolean {
         return (string != "" && string.chars().allMatch(Character::isLetter))
     }
 
@@ -86,5 +86,17 @@ class Maths {
             second > third -> second
             else -> third
         }
+    }
+
+    fun reverse(number: Int): Int {
+        var tempNumber = number
+        var reversedNumber = 0
+
+        while(tempNumber != 0){
+            val digit = tempNumber % 10
+            reversedNumber = reversedNumber * 10 + digit
+            tempNumber /= 10
+        }
+        return reversedNumber
     }
 }

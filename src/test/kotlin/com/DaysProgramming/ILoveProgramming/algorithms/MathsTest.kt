@@ -84,7 +84,14 @@ class MathsTest {
 
     @Test
     fun `should filter null from a list`() {
-        val list: MutableList<Long?> = mutableListOf(null, 1L, null, 5L, 10L, 15L, null, 12L)
-        assertEquals(listOf<Long>(1L, 5L, 10L, 15L, 12L), maths.filterFromLis(list))
+        val list = mutableListOf(null, 1L, null, 5L, 10L, 15L, null, 12L)
+        assertEquals(listOf(1L, 5L, 10L, 15L, 12L), maths.filterFromLis(list))
+    }
+
+    @Test
+    fun `should reverse the given number`() {
+        assertEquals(789, maths.reverse(987))
+        assertEquals(1, maths.reverse(1000))
+        assertEquals(985, maths.reverse(589))
     }
 }
