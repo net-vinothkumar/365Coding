@@ -93,5 +93,6 @@ class MathsTest {
         assertEquals(789, maths.reverse(987))
         assertEquals(1, maths.reverse(1000))
         assertEquals(985, maths.reverse(589))
+        assertEquals(12, maths.reverse(210))
     }
 }
