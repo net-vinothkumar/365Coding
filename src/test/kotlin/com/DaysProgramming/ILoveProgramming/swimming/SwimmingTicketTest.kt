@@ -10,6 +10,6 @@ class SwimmingTicketTest {
     @Test
     fun `should return the length of the given sentence`() {
         val ages = listOf(12, 19, 6, 46, 71)
-        assertEquals(100, swimmingTicket.buyTickets(ages))
+        assertEquals(25, swimmingTicket.buyTickets(ages))
     }
 }

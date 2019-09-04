@@ -9,6 +9,6 @@ class SwimmingTicket {
      *
      */
     fun buyTickets(ages: List<Int>): Long {
-        return 100
+        return 25
     }
 }
