@@ -12,18 +12,16 @@ class SwimmingTicket {
         return ages
                 .stream()
                 .map { age -> getPrice(age) }
-                .mapToLong { x -> x }
+                .mapToLong { value  -> value }
                 .sum()
     }
 
     private fun getPrice(age: Int): Long {
-        if (age == 6 || age > 65) {
-            return 0
-        } else if (age in 8..17) {
-            return 5
-        } else if (age in 18..65) {
-            return 10
+        return when {
+            age == 6 || age > 65 -> 0
+            age in 8..17 -> 5
+            age in 18..65 -> 10
+            else -> 0
         }
-        return 0
     }
 }
