@@ -31,9 +31,7 @@ class SwimmingTicket {
 
     private fun getStudentList(ages: List<Int>): List<Int> {
         return ages
-                .stream()
-                .filter{ age -> isStudentAge(age) }
-                .collect(Collectors.toList())
+                .filter { age -> isStudentAge(age) }
     }
 
     private fun isStudentAge(age: Int) = (age in 16..19)
