@@ -24,4 +24,11 @@ class SwimmingTicketTest {
         val ages = listOf(18, 19, 18, 19, 18)
         assertEquals(40, swimmingTicket.buyTickets(ages))
     }
+
+    @Test
+    fun `should return the tickets price babies as 0`(){
+        val ages = listOf(1, 2, 3, 4, 5)
+        assertEquals(0, swimmingTicket.buyTickets(ages))
+
+    }
 }

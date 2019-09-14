@@ -1,7 +1,5 @@
 package com.DaysProgramming.ILoveProgramming.swimming
 
-import java.util.stream.Collectors
-
 class SwimmingTicket {
     /**
      * age 6 = free
