@@ -29,6 +29,5 @@ class SwimmingTicketTest {
     fun `should return the tickets price babies as 0`(){
         val ages = listOf(1, 2, 3, 4, 5)
         assertEquals(0, swimmingTicket.buyTickets(ages))
-
     }
 }
