@@ -1,5 +1,8 @@
 package com.DaysProgramming.ILoveProgramming.swimming
 
+import java.time.LocalDate
+import java.util.*
+
 class SwimmingTicket {
     /**
      * age 6 = free
@@ -7,8 +10,9 @@ class SwimmingTicket {
      * age > 18 < 65 = 10
      * age > 65 = free
      * group of 5 students -> 1 student offer  -> student age between 16 -19
+     * weekend 2 extra price
      */
-    fun buyTickets(ages: List<Int>): Long {
+    fun buyTickets(ages: List<Int>, date: Date = LocalDate.now()): Long {
         if (isValidAges(ages)) {
             val students = getStudentList(ages)
 

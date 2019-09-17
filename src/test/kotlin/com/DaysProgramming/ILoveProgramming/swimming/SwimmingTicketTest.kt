@@ -2,6 +2,9 @@ package com.DaysProgramming.ILoveProgramming.swimming
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.Month
 
 class SwimmingTicketTest {
 
@@ -26,8 +29,18 @@ class SwimmingTicketTest {
     }
 
     @Test
-    fun `should return the tickets price babies as 0`(){
+    fun `should return the tickets price babies as 0`() {
         val ages = listOf(1, 2, 3, 4, 5)
         assertEquals(0, swimmingTicket.buyTickets(ages))
+    }
+
+    @Test
+    fun `should return the tickets price 2 euro more during the weekend`() {
+        val ages = listOf(17, 59, 6, 20, 5)
+        val pattern = "yyyy-MM-dd"
+        val simpleDateFormat = SimpleDateFormat(pattern)
+
+        val date = simpleDateFormat.parse("2019-09-21")
+        assertEquals(31, swimmingTicket.buyTickets(ages, date))
     }
 }
