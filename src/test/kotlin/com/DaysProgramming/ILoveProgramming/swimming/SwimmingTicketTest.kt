@@ -3,8 +3,6 @@ package com.DaysProgramming.ILoveProgramming.swimming
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.Month
 
 class SwimmingTicketTest {
 
