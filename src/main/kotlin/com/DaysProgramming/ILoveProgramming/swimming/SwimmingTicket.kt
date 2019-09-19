@@ -16,7 +16,7 @@ class SwimmingTicket {
     private val codeForSunday = 0
 
     fun buyTickets(ages: List<Int>, date: Date = Date()): Long {
-        val additionalCost = getWeekendAdditionalCost(date)
+        val additionalCost = calculateWeekEndCost(date)
         if (isValidAges(ages)) {
             val students = getStudentList(ages)
 
@@ -33,7 +33,7 @@ class SwimmingTicket {
         return 0
     }
 
-    private fun getWeekendAdditionalCost(date: Date): Long {
+    private fun calculateWeekEndCost(date: Date): Long {
         val day = date.day
         var additionalCost = 0L
         if (day == codeForSunday || day == codeForSaturday) {
