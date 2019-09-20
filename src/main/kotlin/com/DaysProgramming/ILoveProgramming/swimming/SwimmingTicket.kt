@@ -3,6 +3,7 @@ package com.DaysProgramming.ILoveProgramming.swimming
 import java.util.Date
 
 class SwimmingTicket {
+
     /**
      * age 6 = free
      * age 7-18 = 5
@@ -16,7 +17,7 @@ class SwimmingTicket {
     private val codeForSunday = 0
 
     fun buyTickets(ages: List<Int>, date: Date = Date()): Long {
-        val additionalCost = calculateWeekEndCost(date)
+        val additionalTicketCost = calculateWeekEndCost(date)
         if (isValidAges(ages)) {
             val students = getStudentList(ages)
 
@@ -24,23 +25,31 @@ class SwimmingTicket {
                 return 10L * (ages.size - 1)
             }
 
-            return ages
-                    .stream()
-                    .map { age -> getPrice(age, additionalCost) }
-                    .mapToLong { value -> value }
-                    .sum()
+            return calculateTicketsCost(ages, additionalTicketCost)
         }
         return 0
+    }
+
+    private fun calculateTicketsCost(ages: List<Int>, additionalTicketCost: Long): Long {
+        return ages
+                .stream()
+                .map { age -> getPrice(age, additionalTicketCost) }
+                .mapToLong { value -> value }
+                .sum()
     }
 
     private fun calculateWeekEndCost(date: Date): Long {
         val day = date.day
         var additionalCost = 0L
-        if (day == codeForSunday || day == codeForSaturday) {
+        if (isSaturday(day) || isSunday(day)) {
             additionalCost = 2L
         }
         return additionalCost
     }
+
+    private fun isSaturday(day: Int) = day == codeForSaturday
+
+    private fun isSunday(day: Int) = day == codeForSunday
 
     private fun isValidAges(ages: List<Int>) = ages.stream().anyMatch { age -> age > 0 }
 
