@@ -9,7 +9,9 @@ class KinderGardenTest {
     fun `should add the kids name to the class`() {
         val kinderGarden = KinderGarden()
         kinderGarden.add("John")
+        kinderGarden.add("David")
 
-        assertEquals(kinderGarden.getKids().get(0), "John")
+        assertEquals(kinderGarden.getKids()[0], "John")
+        assertEquals(kinderGarden.getKids()[1], "David")
     }
 }
