@@ -10,8 +10,10 @@ class KinderGardenTest {
         val kinderGarden = KinderGarden()
         kinderGarden.add("John")
         kinderGarden.add("David")
+        kinderGarden.add("Philip")
 
         assertEquals(kinderGarden.getKids()[0], "John")
         assertEquals(kinderGarden.getKids()[1], "David")
+        assertEquals(kinderGarden.getKids()[2], "Philip")
     }
 }
