@@ -11,9 +11,11 @@ class KinderGardenTest {
         kinderGarden.add("John")
         kinderGarden.add("David")
         kinderGarden.add("Philip")
+        kinderGarden.add("Claudia")
 
         assertEquals(kinderGarden.getKids()[0], "John")
         assertEquals(kinderGarden.getKids()[1], "David")
         assertEquals(kinderGarden.getKids()[2], "Philip")
+        assertEquals(kinderGarden.getKids()[3], "Claudia")
     }
 }
