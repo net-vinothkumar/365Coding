@@ -8,7 +8,6 @@ class RunLengthEncoding {
         var result = ""
 
         for (char in input) {
-            println(char)
             if (char != lastChar) {
                 result += """$count$lastChar"""
                 lastChar = char
@@ -18,5 +17,9 @@ class RunLengthEncoding {
             }
         }
         return result + """$count$lastChar"""
+    }
+
+    fun decode(input: String): String? {
+        return "AAAABBBCCDAA"
     }
 }

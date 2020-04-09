@@ -10,4 +10,10 @@ class RunLengthEncodingTest {
         val runLengthEncoding = RunLengthEncoding()
         assertEquals("4A3B2C1D2A", runLengthEncoding.encode("AAAABBBCCDAA"))
     }
+
+    @Test
+    fun `should return decoded value AAAABBBCCDAA for 4A3B2C1D2A`() {
+        val runLengthEncoding = RunLengthEncoding()
+        assertEquals("AAAABBBCCDAA", runLengthEncoding.decode("4A3B2C1D2A"))
+    }
 }
