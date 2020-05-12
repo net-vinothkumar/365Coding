@@ -6,13 +6,10 @@ import java.util.Set;
 
 public class FindDuplicateCharacters {
     public static void main(String[] args) {
-        printDuplicateCharacters("Programming");
-        printDuplicateCharacters("HelloWorld");
-        printDuplicateCharacters("InterviewDOT");
-        printDuplicateCharacters("Why Do We Have So Many Programming Languages");
+        printCharacters("Programming");
     }
 
-    private static void printDuplicateCharacters(String input) {
+    private static void printCharacters(String input) {
         Map<Character, Integer> characterCount = new HashMap<>();
 
         for (Character character : input.toCharArray()) {
