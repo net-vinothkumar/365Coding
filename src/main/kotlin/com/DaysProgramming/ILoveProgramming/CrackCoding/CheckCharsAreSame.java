@@ -8,6 +8,12 @@ public class CheckCharsAreSame {
     public static void main(String[] args) {
         solutionOne();
         solutionTwo();
+        returnMultiple('H');
+    }
+
+    private static String returnMultiple(char input) {
+        return input == 'H' ? "Hello World" :
+               input == 'Q' ? "Q" : null;
     }
 
     private static void solutionTwo() {
